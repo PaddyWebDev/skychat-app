@@ -13,7 +13,7 @@ import toast from 'react-hot-toast';
 interface SettingsModalProps {
     OpenModal: boolean
     CloseModal: () => void;
-    currentUser: User
+    currentUser: User | null
 }
 
 export default function SettingsModal({ OpenModal, CloseModal, currentUser }: SettingsModalProps) {
@@ -63,7 +63,7 @@ export default function SettingsModal({ OpenModal, CloseModal, currentUser }: Se
                                     Photo
                                 </label>
                                 <div className="mt-2 flex items-center gap-x-3 ">
-                                    <Image width={50} height={50} src={image || currentUser.image || '/Images/NoProfilePic.png'} className=' h-14 w-14 object-cover rounded-full' alt='UserProfile' />
+                                    <Image width={50} height={50} src={image || currentUser?.image || '/Images/NoProfilePic.png'} className=' h-14 w-14 object-cover rounded-full' alt='UserProfile' />
                                     <CldUploadButton
                                         options={{ maxFiles: 1 }}
                                         onUpload={handleUpload}

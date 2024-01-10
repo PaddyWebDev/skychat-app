@@ -48,7 +48,6 @@ const Login: React.FC = () => {
     useEffect(() => {
         if (session.status === 'authenticated') {
             redirect('/users');
-            // router.push("/users")
         }
     }, [session, router])
 
