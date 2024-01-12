@@ -11,6 +11,8 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'SkyChat',
   description: 'Created By Padmanabh Malwade',
+  icons: "/Images/Favicon.png"
+
 }
 
 export default function RootLayout({
